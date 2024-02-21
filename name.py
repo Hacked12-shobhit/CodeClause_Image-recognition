@@ -1,11 +1,11 @@
 import cv2
 import matplotlib.pyplot as plt
-config_file = 'Image-recognition_L-1_T-1/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
-frozen_model = 'Image-recognition_L-1_T-1/frozen_inference_graph.pb.pb'
+config_file = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+frozen_model = 'frozen_inference_graph.pb.pb'
 
 model = cv2.dnn_DetectionModel(frozen_model,config_file)
 classLabels = []
-file_name = 'Image-recognition_L-1_T-1/labels.txt'
+file_name = 'labels.txt'
 with open(file_name,'rt') as fpt:
     classLabels = fpt.read().rstrip('\n').split('\n')
 # print(classLabels)
