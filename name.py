@@ -28,7 +28,7 @@ model.setInputSwapRB(True)
 # plt.imshow(img)
 # plt.show()
 
-vid = cv2.VideoCapture("Image-recognition_L-1_T-1/video3.mp4")  #detect by video
+vid = cv2.VideoCapture("video3.mp4")  #detect by video
 # vid = cv2.VideoCapture(1)  #detect by WebCam
 
 if not vid.isOpened():
